@@ -10,6 +10,7 @@ def map(array)
 end
 
 def reduce(array, start_val=nil)
+  sum = 0
   if start_val
     sum = start_val
   end
