@@ -9,6 +9,14 @@ def map(array)
   new_arr
 end
 
-def reduce(array)
+def reduce(array, start_val=nil)
+  if start_val
+    sum = start_val
+  end
   
+  for i in 0...array.length
+    sum = yield(sum, array[i])
+  end
+  
+  return sum
 end
